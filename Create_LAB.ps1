@@ -55,8 +55,8 @@ New-ADOrganizationalUnit -Name Distribution -Path "OU=Groups,OU=LAB,DC=$domain,D
 $Pass='L0ndon2018$'
 $Password=ConvertTo-SecureString -AsPlainText -Force -String $Pass
 
-New-ADUser -SamAccountName "joker" -UserPrincipalName "joker@gp-informatik.ch" -GivenName "joker" -Name "joker " -DisplayName "joker" -City "Gotham City" -AccountPassword $Password -Enabled $true -Path "OU=Standard,OU=Users,OU=LAB,DC=$domain,DC=$TLD" 
-New-ADUser -SamAccountName "joker_adm" -UserPrincipalName "joker_adm@gp-informatik.ch" -GivenName "joker"  -Name "joker ADM" -DisplayName "joker ADM" -City "Gotham City" -AccountPassword $Password -Enabled $true -Path "OU=Admins,OU=Users,OU=LAB,DC=$domain,DC=$TLD"
+New-ADUser -SamAccountName "joker" -UserPrincipalName "joker@$domain.$TLD" -GivenName "joker" -Name "joker " -DisplayName "joker" -City "Gotham City" -AccountPassword $Password -Enabled $true -Path "OU=Standard,OU=Users,OU=LAB,DC=$domain,DC=$TLD" 
+New-ADUser -SamAccountName "joker_adm" -UserPrincipalName "joker_adm@$domain.$TLD" -GivenName "joker"  -Name "joker ADM" -DisplayName "joker ADM" -City "Gotham City" -AccountPassword $Password -Enabled $true -Path "OU=Admins,OU=Users,OU=LAB,DC=$domain,DC=$TLD"
 
 ###### Create new Admin Groups on LAB ######
 
