@@ -25,7 +25,7 @@ Import-Module activedirectory
 $domain = Read-Host "Please enter the domain name"
 $TLD = "int"
 
-###### Create OU in gp-informatik.ch (Root OU) ######
+###### Create OU in whitehat (Root OU) ######
 
 New-ADOrganizationalUnit -Name LAB -Path "DC=$domain,DC=$TLD"
 
